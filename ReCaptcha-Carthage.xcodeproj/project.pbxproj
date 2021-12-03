@@ -16,7 +16,7 @@
 		F24EA1E31F968403001DEC17 /* ReCaptchaWebViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24EA1D91F9683F5001DEC17 /* ReCaptchaWebViewManager.swift */; };
 		F24EA1E41F968403001DEC17 /* String+Dict.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24EA1DA1F9683F5001DEC17 /* String+Dict.swift */; };
 		F24EA1E51F968403001DEC17 /* ReCaptchaError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24EA1DB1F9683F5001DEC17 /* ReCaptchaError.swift */; };
-		F24EA1E61F968403001DEC17 /* ReCaptcha.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24EA1DE1F9683F5001DEC17 /* ReCaptcha.swift */; };
+		F24EA1E61F968403001DEC17 /* ReCAPTCHA.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24EA1DE1F9683F5001DEC17 /* ReCAPTCHA.swift */; };
 		F24EA1E71F968406001DEC17 /* recaptcha.html in Resources */ = {isa = PBXBuildFile; fileRef = F24EA1E01F9683F5001DEC17 /* recaptcha.html */; };
 		F2AE8614204F3B42002E28D7 /* ReCaptchaResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AE8613204F3B41002E28D7 /* ReCaptchaResult.swift */; };
 /* End PBXBuildFile section */
@@ -46,7 +46,7 @@
 		F24EA1DA1F9683F5001DEC17 /* String+Dict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Dict.swift"; sourceTree = "<group>"; };
 		F24EA1DB1F9683F5001DEC17 /* ReCaptchaError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReCaptchaError.swift; sourceTree = "<group>"; };
 		F24EA1DD1F9683F5001DEC17 /* ReCaptcha+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReCaptcha+Rx.swift"; sourceTree = "<group>"; };
-		F24EA1DE1F9683F5001DEC17 /* ReCaptcha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReCaptcha.swift; sourceTree = "<group>"; };
+		F24EA1DE1F9683F5001DEC17 /* ReCAPTCHA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReCAPTCHA.swift; sourceTree = "<group>"; };
 		F24EA1E01F9683F5001DEC17 /* recaptcha.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = recaptcha.html; sourceTree = "<group>"; };
 		F2AE8613204F3B41002E28D7 /* ReCaptchaResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReCaptchaResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,7 +144,7 @@
 				F2AE8613204F3B41002E28D7 /* ReCaptchaResult.swift */,
 				F231B3991FEC51C800F82943 /* DispatchQueue+Throttle.swift */,
 				F24EA1DC1F9683F5001DEC17 /* Rx */,
-				F24EA1DE1F9683F5001DEC17 /* ReCaptcha.swift */,
+				F24EA1DE1F9683F5001DEC17 /* ReCAPTCHA.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -288,7 +288,7 @@
 				F24EA1E51F968403001DEC17 /* ReCaptchaError.swift in Sources */,
 				F24EA1E21F968403001DEC17 /* ReCaptchaDecoder.swift in Sources */,
 				F2AE8614204F3B42002E28D7 /* ReCaptchaResult.swift in Sources */,
-				F24EA1E61F968403001DEC17 /* ReCaptcha.swift in Sources */,
+				F24EA1E61F968403001DEC17 /* ReCAPTCHA.swift in Sources */,
 				F24EA1E31F968403001DEC17 /* ReCaptchaWebViewManager.swift in Sources */,
 				F24EA1E41F968403001DEC17 /* String+Dict.swift in Sources */,
 				F231B39A1FEC51C800F82943 /* DispatchQueue+Throttle.swift in Sources */,
@@ -318,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -368,7 +369,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -379,6 +380,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -421,7 +423,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
