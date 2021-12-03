@@ -6,12 +6,23 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		A1B8093727595E3B00BE239D /* ReCaptcha-XCFramework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A1B8093827595E3B00BE239D /* Build configuration list for PBXAggregateTarget "ReCaptcha-XCFramework" */;
+			buildPhases = (
+				A1B8093B27595E4100BE239D /* Build XCFramework */,
+			);
+			dependencies = (
+			);
+			name = "ReCaptcha-XCFramework";
+			productName = "ReCaptcha-XCFramework";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		F206BAB51F8D3DE900A25807 /* ReCaptcha-Carthage.h in Headers */ = {isa = PBXBuildFile; fileRef = F206BAB31F8D3DE900A25807 /* ReCaptcha-Carthage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F206BB1D1F8D4DBC00A25807 /* ReCaptcha_RxSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = F206BB1B1F8D4DBC00A25807 /* ReCaptcha_RxSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F206BB221F8D4DDF00A25807 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F206BB121F8D4D1400A25807 /* RxSwift.framework */; };
 		F231B39A1FEC51C800F82943 /* DispatchQueue+Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231B3991FEC51C800F82943 /* DispatchQueue+Throttle.swift */; };
-		F24EA1E11F9683FB001DEC17 /* ReCaptcha+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24EA1DD1F9683F5001DEC17 /* ReCaptcha+Rx.swift */; };
 		F24EA1E21F968403001DEC17 /* ReCaptchaDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24EA1D81F9683F5001DEC17 /* ReCaptchaDecoder.swift */; };
 		F24EA1E31F968403001DEC17 /* ReCaptchaWebViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24EA1D91F9683F5001DEC17 /* ReCaptchaWebViewManager.swift */; };
 		F24EA1E41F968403001DEC17 /* String+Dict.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24EA1DA1F9683F5001DEC17 /* String+Dict.swift */; };
@@ -21,23 +32,12 @@
 		F2AE8614204F3B42002E28D7 /* ReCaptchaResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AE8613204F3B41002E28D7 /* ReCaptchaResult.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		F206BB231F8D4DF800A25807 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F206BAA71F8D3DE900A25807 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F206BAAF1F8D3DE900A25807;
-			remoteInfo = ReCaptcha;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		F206BAB01F8D3DE900A25807 /* ReCaptcha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReCaptcha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F206BAB31F8D3DE900A25807 /* ReCaptcha-Carthage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReCaptcha-Carthage.h"; sourceTree = "<group>"; };
 		F206BAB41F8D3DE900A25807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F206BACF1F8D3E2800A25807 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		F206BB121F8D4D1400A25807 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		F206BB191F8D4DBC00A25807 /* ReCaptcha_RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReCaptcha_RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F206BB1B1F8D4DBC00A25807 /* ReCaptcha_RxSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReCaptcha_RxSwift.h; sourceTree = "<group>"; };
 		F206BB1C1F8D4DBC00A25807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F231B3991FEC51C800F82943 /* DispatchQueue+Throttle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Throttle.swift"; sourceTree = "<group>"; };
@@ -56,14 +56,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F206BB151F8D4DBC00A25807 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F206BB221F8D4DDF00A25807 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				F206BAB01F8D3DE900A25807 /* ReCaptcha.framework */,
-				F206BB191F8D4DBC00A25807 /* ReCaptcha_RxSwift.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,14 +167,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F206BB161F8D4DBC00A25807 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F206BB1D1F8D4DBC00A25807 /* ReCaptcha_RxSwift.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -205,25 +188,6 @@
 			productReference = F206BAB01F8D3DE900A25807 /* ReCaptcha.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F206BB181F8D4DBC00A25807 /* ReCaptcha_RxSwift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F206BB1E1F8D4DBC00A25807 /* Build configuration list for PBXNativeTarget "ReCaptcha_RxSwift" */;
-			buildPhases = (
-				F206BB141F8D4DBC00A25807 /* Sources */,
-				F206BB151F8D4DBC00A25807 /* Frameworks */,
-				F206BB161F8D4DBC00A25807 /* Headers */,
-				F206BB171F8D4DBC00A25807 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F206BB241F8D4DF800A25807 /* PBXTargetDependency */,
-			);
-			name = ReCaptcha_RxSwift;
-			productName = ReCaptcha_RxSwift;
-			productReference = F206BB191F8D4DBC00A25807 /* ReCaptcha_RxSwift.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -233,11 +197,11 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Flávio Caetano";
 				TargetAttributes = {
-					F206BAAF1F8D3DE900A25807 = {
-						CreatedOnToolsVersion = 8.3.2;
+					A1B8093727595E3B00BE239D = {
+						CreatedOnToolsVersion = 13.1;
 						ProvisioningStyle = Automatic;
 					};
-					F206BB181F8D4DBC00A25807 = {
+					F206BAAF1F8D3DE900A25807 = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -257,7 +221,7 @@
 			projectRoot = "";
 			targets = (
 				F206BAAF1F8D3DE900A25807 /* ReCaptcha */,
-				F206BB181F8D4DBC00A25807 /* ReCaptcha_RxSwift */,
+				A1B8093727595E3B00BE239D /* ReCaptcha-XCFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -271,14 +235,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F206BB171F8D4DBC00A25807 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A1B8093B27595E4100BE239D /* Build XCFramework */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build XCFramework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#########################################\n# 1. Define Constants                   #\n#########################################\n\nCONFIGURATION=\"Release\"\n\n# General\nPROJECT_NAME=\"ReCaptcha-Carthage\"\nTARGET_NAME=\"ReCaptcha\"\nSCHEME_NAME=\"ReCaptcha.xcframework\"\nFRAMEWORK_NAME=\"ReCaptcha.framework\"\n\n# Constants for xcframework bundling\nXCFRAMEWORK_NAME=\"ReCaptcha.xcframework\"\nIOS_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/$FRAMEWORK_NAME\"\nSIMULATOR_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/$FRAMEWORK_NAME\"\n\n# Will probably be different for non-library builds\nBUILD_TYPE=\"staticlib\"\n\n#########################################\n# 2. Build variants                     #\n#########################################\n\n# We use xcodebuild to build each variant:\n# a. iOS Sim\nxcodebuild -target ${TARGET_NAME} -configuration $CONFIGURATION -project \"${PROJECT_NAME}.xcodeproj\" -sdk iphonesimulator -arch x86_64 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"$SYMROOT\" build\n# b. iOS\nxcodebuild -target ${TARGET_NAME} -configuration $CONFIGURATION -sdk iphoneos BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"$SYMROOT\" build\n\n# c. macOS Catalyst (broken for some reason)\n#xcodebuild -target ${PROJECT_NAME} -configuration $CONFIGURATION ARCHS=\"x86_64h\" -destination 'platform=macOS,variant=Mac Catalyst' BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"$SYMROOT\" MACH_O_TYPE=$BUILD_TYPE build\n\n#########################################\n# 3. Create xcframework                 #\n#########################################\n\nxcodebuild -create-xcframework -framework $IOS_DIR -framework $SIMULATOR_DIR -output \"${BUILD_DIR}/${XCFRAMEWORK_NAME}\"\n\n#########################################\n# 4. Zip xcframework                    #\n#########################################\n\n# We pushd to prevent issue where zip has all parent dirs in ${BUILD_DIR} are included\npushd ${BUILD_DIR}\n# zip -r <zip archive name> <dir to zip>\nzip -r \"${XCFRAMEWORK_NAME}.zip\" \"${XCFRAMEWORK_NAME}\"\n\n#########################################\n# 4. Move xcframework to project dir    #\n#########################################\n\ncp -r \"${XCFRAMEWORK_NAME}\" \"${SRCROOT}\"\npopd\n";
 		};
-/* End PBXResourcesBuildPhase section */
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F206BAAB1F8D3DE900A25807 /* Sources */ = {
@@ -295,25 +273,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F206BB141F8D4DBC00A25807 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F24EA1E11F9683FB001DEC17 /* ReCaptcha+Rx.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		F206BB241F8D4DF800A25807 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F206BAAF1F8D3DE900A25807 /* ReCaptcha */;
-			targetProxy = F206BB231F8D4DF800A25807 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
+		A1B8093927595E3B00BE239D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A1B8093A27595E3B00BE239D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		F206BAB61F8D3DE900A25807 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -432,6 +410,7 @@
 		F206BAB91F8D3DE900A25807 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -455,6 +434,7 @@
 		F206BABA1F8D3DE900A25807 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -475,59 +455,18 @@
 			};
 			name = Release;
 		};
-		F206BB1F1F8D4DBC00A25807 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)\\ Carthage\\ Test/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = ReCaptcha_RxSwift/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_SWIFT_FLAGS = "-D IMPORT_RECAPTCHA";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.flaviocaetano.ReCaptcha-RxSwift";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-			};
-			name = Debug;
-		};
-		F206BB201F8D4DBC00A25807 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)\\ Carthage\\ Test/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = ReCaptcha_RxSwift/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_SWIFT_FLAGS = "-D IMPORT_RECAPTCHA";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.flaviocaetano.ReCaptcha-RxSwift";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A1B8093827595E3B00BE239D /* Build configuration list for PBXAggregateTarget "ReCaptcha-XCFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1B8093927595E3B00BE239D /* Debug */,
+				A1B8093A27595E3B00BE239D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F206BAAA1F8D3DE900A25807 /* Build configuration list for PBXProject "ReCaptcha-Carthage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -542,15 +481,6 @@
 			buildConfigurations = (
 				F206BAB91F8D3DE900A25807 /* Debug */,
 				F206BABA1F8D3DE900A25807 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F206BB1E1F8D4DBC00A25807 /* Build configuration list for PBXNativeTarget "ReCaptcha_RxSwift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F206BB1F1F8D4DBC00A25807 /* Debug */,
-				F206BB201F8D4DBC00A25807 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
