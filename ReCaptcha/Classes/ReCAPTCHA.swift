@@ -12,7 +12,7 @@ import WebKit
 
 /**
 */
-public class ReCaptcha {
+public class ReCAPTCHA {
     fileprivate struct Constants {
         struct InfoDictKeys {
             static let APIKey = "ReCaptchaKey"
@@ -56,7 +56,7 @@ public class ReCaptcha {
 
         /// The Bundle that holds ReCaptcha's assets
         private static let bundle: Bundle = {
-            let bundle = Bundle(for: ReCaptcha.self)
+            let bundle = Bundle(for: ReCAPTCHA.self)
             guard let cocoapodsBundle = bundle
                 .path(forResource: "ReCaptcha", ofType: "bundle")
                 .flatMap(Bundle.init(path:)) else {
@@ -236,7 +236,7 @@ public class ReCaptcha {
 
 // MARK: - Private Methods
 
-private extension ReCaptcha.Config {
+private extension ReCAPTCHA.Config {
     /**
      - parameter url: The URL to be fixed
      - returns: An URL with scheme
