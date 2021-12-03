@@ -10,10 +10,10 @@ import RxSwift
 import UIKit
 
 /// Makes ReCaptcha compatible with RxSwift extensions
-extension ReCaptcha: ReactiveCompatible {}
+extension ReCAPTCHA: ReactiveCompatible {}
 
 /// Provides a public extension on ReCaptcha that makes it reactive.
-public extension Reactive where Base: ReCaptcha {
+public extension Reactive where Base: ReCAPTCHA {
 
     /**
      - parameters:
