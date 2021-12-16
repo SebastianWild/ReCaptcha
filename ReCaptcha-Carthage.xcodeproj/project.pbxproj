@@ -6,20 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		A1B8093727595E3B00BE239D /* ReCaptcha-XCFramework */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = A1B8093827595E3B00BE239D /* Build configuration list for PBXAggregateTarget "ReCaptcha-XCFramework" */;
-			buildPhases = (
-				A1B8093B27595E4100BE239D /* Build XCFramework */,
-			);
-			dependencies = (
-			);
-			name = "ReCaptcha-XCFramework";
-			productName = "ReCaptcha-XCFramework";
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		F206BAB51F8D3DE900A25807 /* ReCaptcha-Carthage.h in Headers */ = {isa = PBXBuildFile; fileRef = F206BAB31F8D3DE900A25807 /* ReCaptcha-Carthage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F231B39A1FEC51C800F82943 /* DispatchQueue+Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231B3991FEC51C800F82943 /* DispatchQueue+Throttle.swift */; };
@@ -197,10 +183,6 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Flávio Caetano";
 				TargetAttributes = {
-					A1B8093727595E3B00BE239D = {
-						CreatedOnToolsVersion = 13.1;
-						ProvisioningStyle = Automatic;
-					};
 					F206BAAF1F8D3DE900A25807 = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
@@ -221,7 +203,6 @@
 			projectRoot = "";
 			targets = (
 				F206BAAF1F8D3DE900A25807 /* ReCaptcha */,
-				A1B8093727595E3B00BE239D /* ReCaptcha-XCFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -236,27 +217,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		A1B8093B27595E4100BE239D /* Build XCFramework */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Build XCFramework";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#########################################\n# 1. Define Constants                   #\n#########################################\n\nCONFIGURATION=\"Release\"\n\n# General\nPROJECT_NAME=\"ReCaptcha-Carthage\"\nTARGET_NAME=\"ReCaptcha\"\nSCHEME_NAME=\"ReCaptcha.xcframework\"\nFRAMEWORK_NAME=\"ReCaptcha.framework\"\n\n# Constants for xcframework bundling\nXCFRAMEWORK_NAME=\"ReCaptcha.xcframework\"\nIOS_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/$FRAMEWORK_NAME\"\nSIMULATOR_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/$FRAMEWORK_NAME\"\n\n# Will probably be different for non-library builds\nBUILD_TYPE=\"staticlib\"\n\n#########################################\n# 2. Build variants                     #\n#########################################\n\n# We use xcodebuild to build each variant:\n# a. iOS Sim\nxcodebuild -target ${TARGET_NAME} -configuration $CONFIGURATION -project \"${PROJECT_NAME}.xcodeproj\" -sdk iphonesimulator -arch x86_64 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"$SYMROOT\" build\n# b. iOS\nxcodebuild -target ${TARGET_NAME} -configuration $CONFIGURATION -sdk iphoneos BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"$SYMROOT\" build\n\n# c. macOS Catalyst (broken for some reason)\n#xcodebuild -target ${PROJECT_NAME} -configuration $CONFIGURATION ARCHS=\"x86_64h\" -destination 'platform=macOS,variant=Mac Catalyst' BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"$SYMROOT\" MACH_O_TYPE=$BUILD_TYPE build\n\n#########################################\n# 3. Create xcframework                 #\n#########################################\n\nxcodebuild -create-xcframework -framework $IOS_DIR -framework $SIMULATOR_DIR -output \"${BUILD_DIR}/${XCFRAMEWORK_NAME}\"\n\n#########################################\n# 4. Zip xcframework                    #\n#########################################\n\n# We pushd to prevent issue where zip has all parent dirs in ${BUILD_DIR} are included\npushd ${BUILD_DIR}\n# zip -r <zip archive name> <dir to zip>\nzip -r \"${XCFRAMEWORK_NAME}.zip\" \"${XCFRAMEWORK_NAME}\"\n\n#########################################\n# 4. Move xcframework to project dir    #\n#########################################\n\ncp -r \"${XCFRAMEWORK_NAME}\" \"${SRCROOT}\"\npopd\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F206BAAB1F8D3DE900A25807 /* Sources */ = {
@@ -276,22 +236,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		A1B8093927595E3B00BE239D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		A1B8093A27595E3B00BE239D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		F206BAB61F8D3DE900A25807 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -462,15 +406,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A1B8093827595E3B00BE239D /* Build configuration list for PBXAggregateTarget "ReCaptcha-XCFramework" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A1B8093927595E3B00BE239D /* Debug */,
-				A1B8093A27595E3B00BE239D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		F206BAAA1F8D3DE900A25807 /* Build configuration list for PBXProject "ReCaptcha-Carthage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
